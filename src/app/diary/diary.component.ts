@@ -14,9 +14,7 @@ export class DiaryComponent implements OnInit {
     new Diary(5,'Visit my family in Guinea in 2021','social '),
     new Diary(6,'Eat less Red Meat','avoid blood pressure'),
   ];
-  toggleDetails(index){
-    this.diarys[index].showDescription = !this.diarys[index].showDescription;
-  }
+  
 
   constructor() { }
 
