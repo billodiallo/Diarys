@@ -4,7 +4,7 @@
     <ul>
         <div *ngFor='let diary of diarys;let i = index'>
 
-            <li>{{diary.name}}</li>
+            <li appStrikethrough>{{diary.name}} due on {{diary.completeDate}}</li>
             <button (click)='toggleDetails(i)'>Toggle Details</button>
             <app-diary-detail *ngIf='diary.showDescription' [diary]='diary'></app-diary-detail>
             </div>
