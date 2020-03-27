@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DiaryComponent } from './diary/diary.component';
 import { DiaryDetailComponent } from './diary-detail/diary-detail.component';
+import { StrikethroughDirective } from './strikethrough.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     DiaryComponent,
-    DiaryDetailComponent
+    DiaryDetailComponent,
+    StrikethroughDirective
   ],
   imports: [
     BrowserModule,
