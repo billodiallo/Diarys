@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Diary} from '../diary'
 
 @Component({
@@ -7,7 +8,12 @@ import {Diary} from '../diary'
   styleUrls: ['./diary-detail.component.css']
 })
 export class DiaryDetailComponent implements OnInit {
+  @Input() diary: Diary;
+  @Output() isComplete = new EventEmitter<boolean>();
 
+  diaryComplete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
   constructor() { }
 
   ngOnInit(): void {
