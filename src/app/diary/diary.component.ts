@@ -15,7 +15,9 @@ export class DiaryComponent implements OnInit {
     new Diary(6,'Eat less Red Meat','avoid blood pressure'),
   ];
   
-
+  toggleDetails(index){
+    this.diarys[index].showDescription = !this.diarys[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit(): void {
