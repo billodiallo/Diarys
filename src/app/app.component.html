@@ -1,0 +1,9 @@
+<div>
+  <h1>My Diarys</h1>
+  <ul>
+    <li *ngFor='let diary of diarys'>
+      {{diary.name}}
+    </li>
+</ul>
+<p *ngIf='diarys.length > 5'>Your diarys are too many</p>
+</div>
