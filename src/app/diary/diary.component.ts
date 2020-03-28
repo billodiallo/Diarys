@@ -23,9 +23,19 @@ export class DiaryComponent implements OnInit {
       this.diarys.splice(index,1);
     }
   }
+  deleteGoal(isComplete, index){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.diarys[index].name}?`)
+
+      if (toDelete){
+        this.diarys.splice(index,1)
+      }
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }
