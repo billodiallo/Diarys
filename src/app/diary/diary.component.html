@@ -1,13 +1,21 @@
-<div>
+<div class="container">
     <h1>My Diarys</h1>
     <hr>
-    <ul>
+  
+    <div class="row">
+      <div class="col-md-6">
         <div *ngFor='let diary of diarys;let i = index'>
-
-            <li appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</li> 
-            <button (click)='toggleDetails(i)'>Toggle Details</button>
-            <app-diary-detail *ngIf='diary.showDescription' [diary]='diary'></app-diary-detail>
-            </div>
-        </ul>
-        <p *ngIf='diarys.length > 5'>You have too many diarys</p>
-      
+          <div>
+            <h4 id={{i}} appStrikethrough>{{diary.name}} due on {{diary.completeDate|date|uppercase}}</h4>
+            <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+          </div>
+  
+          <div *ngIf='diary.showDescription'>
+            <app-diary-detail  [diary]='diary' (isComplete) = 'deleteDiary($event,i)'></app-diary-detail>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <p *ngIf='diary.length > 5'>You have too many diarys</p>
+  </div>
