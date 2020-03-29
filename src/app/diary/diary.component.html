@@ -15,7 +15,9 @@
           </div>
         </div>
       </div>
-    </div>
-  
-    <p *ngIf='diary.length > 5'>You have too many diarys</p>
-  </div>
+      <div class="col-md-6" style="margin-top:20px">
+        <app-diary-form (addDiary)="addNewDiary($event)"></app-diary-form>
+</div>
+</div>
+<p *ngIf='diarys.length > 5'>You have too many diarys</p>
+</div>

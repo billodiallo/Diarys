@@ -9,7 +9,7 @@ import { Diary } from '../diary';
 export class DiaryFormComponent implements OnInit {
 
   newDiary = new Diary(0,"","",new Date());
-  @Output() addDiary = new EventEmitter<Diary>();
+  @Output() addDiary = new EventEmitter<Diary>(); //an event emitter to emmit events to be bound to the parent component
 
   submitDiary(){
 this.addDiary.emit(this.newDiary);

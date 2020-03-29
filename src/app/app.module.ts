@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +10,7 @@ import { DiaryDetailComponent } from './diary-detail/diary-detail.component';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { DiaryFormComponent } from './diary-form/diary-form.component';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [

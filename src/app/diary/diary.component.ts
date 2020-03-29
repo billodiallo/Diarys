@@ -23,7 +23,7 @@ export class DiaryComponent implements OnInit {
       this.diarys.splice(index,1);
     }
   }
-  deleteGoal(isComplete, index){
+  deleteDiary(isComplete, index){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.diarys[index].name}?`)
 
@@ -32,10 +32,16 @@ export class DiaryComponent implements OnInit {
       }
     }
   }
+  
   constructor() { }
 
   ngOnInit(): void {
   }
+  addNewDiary(diary){
+    let diaryLength = this.diarys.length;
+    diary.id = diaryLength+1;
+    diary.completeDate = new Date(diary.completeDate)
+    this.diarys.push(diary)
 
-
+}
 }

@@ -1,6 +1,6 @@
 
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {Diary} from '../diary'
+import {Diary} from '../diary';
 
 @Component({
   selector: 'app-diary-detail',
@@ -8,7 +8,7 @@ import {Diary} from '../diary'
   styleUrls: ['./diary-detail.component.css']
 })
 export class DiaryDetailComponent implements OnInit {
-  @Input() diary: Diary;
+  @Input() diary: Diary; 
   @Output() isComplete = new EventEmitter<boolean>();
 
   diaryComplete(complete:boolean){
